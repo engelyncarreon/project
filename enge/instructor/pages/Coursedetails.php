@@ -232,8 +232,10 @@
                                 <p>Requirement: <?php echo $rowcourse['course_requirement']; ?></p>
                     
                                 <form action="students.php" method="post">
+
                                     <input type="hidden" name="idd" value="<?php echo $urlid;?>"/>
                                     <input type="submit" name="students" value="View all Students"/>
+                                    
                                 </form>
 <!--                            </div>-->
                 
