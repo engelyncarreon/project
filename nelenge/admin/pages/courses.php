@@ -124,7 +124,7 @@
 
                         <li>
 
-                            <a href="enroll.php"><i class="fa fa-user-plus"></i> Enroll</a>
+                            <a href="enroll.php"><i class="fa fa-plus"></i> Enroll</a>
 
                         </li>
 
@@ -192,7 +192,7 @@
 
                                 while ($row1 = $result -> fetch_assoc()){
                                     echo " <tr>
-                                            <td> <a href =Coursedetails?course=".$row1["course_id"] ."> " . $row1["course_name"] . "</a></td>
+                                            <td>" . $row1["course_name"] . "</td>
                                             <td>" . $row1["course_category"] . "</td>
                                             <td>" . $row1["course_duration"] . "</td>
                                             <td>" . $row1["course_price"] . "</td>

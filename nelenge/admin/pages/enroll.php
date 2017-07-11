@@ -21,7 +21,9 @@
 
         <link href="../styles/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-        <link href="../styles/table.css" rel="stylesheet" type="text/css">
+         <link href="../styles/table.css" rel="stylesheet" type="text/css">
+
+         <link href="../styles/button.css" rel="stylesheet" type="text/css">
 
         <link rel = icon href = "../image/ntu-logo.png">
         
@@ -129,7 +131,7 @@
                         </li>
                         <li>
 
-                            <a href="enroll.php"><i class="fa fa-user-plus"></i> Enroll</a>
+                            <a href="enroll.php"><i class="fa fa-plus"></i> Enroll</a>
 
                         </li>
 
@@ -156,7 +158,7 @@
 
                     <div class="col-lg-12">
 
-                        <h1 class="page-header"><i class = 'fa fa-user-plus'></i> Enroll</h1>
+                        <h1 class="page-header"><i class = 'fa fa-plus'></i> Enroll</h1>
 
                         <ol class="breadcrumb">
 
@@ -209,7 +211,7 @@
                                             <td>" . $qur["paymentStatus"] ."</td>                      
                                             <td>
                                             <input type='hidden' name='pad' value='". $id2."'/>".
-                                            "<input type='submit' name='status' value='Paid'/>
+                                            "<input class = 'button' type='submit' name='status' value='Paid'/>
                                            </td>                         
                                         </tr>";
                             }

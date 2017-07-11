@@ -122,7 +122,7 @@
 
                         <li>
 
-                            <a href="enroll.php"><i class="fa fa-user-plus"></i> Enroll</a>
+                            <a href="enroll.php"><i class="fa fa-plus"></i> Enroll</a>
 
                         </li>
 

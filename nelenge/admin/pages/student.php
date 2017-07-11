@@ -126,7 +126,7 @@
 
                         <li>
 
-                            <a href="enroll.php"><i class="fa fa-user-plus"></i> Enroll</a>
+                            <a href="enroll.php"><i class="fa fa-plus"></i> Enroll</a>
 
                         </li>
 
@@ -158,7 +158,7 @@
 
                     <div class="col-lg-12">
 
-                        <h1 class="page-header"><i class = "fa fa-graduation-cap"></i> Student<small> Approval</small></h1>
+                        <h1 class="page-header"><i class = "fa fa-user"></i> Student<small> Approval</small></h1>
 
                         <ol class="breadcrumb">
 
