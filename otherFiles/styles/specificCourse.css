@@ -1,0 +1,27 @@
+/*Specific Course Style*/
+
+.paragraph{
+
+    margin-left: 50px;
+}
+
+.content{
+
+	font-size: 20px;
+	white-space: pre-line;
+	text-align: justify;
+    text-justify: inter-word;
+}
+
+.title{
+	font-weight: bold;
+	color: #055a72;
+}
+
+/*image in the specific course display*/
+
+.img-responsive{
+
+	width: 530px;
+    height: 300px;
+}
