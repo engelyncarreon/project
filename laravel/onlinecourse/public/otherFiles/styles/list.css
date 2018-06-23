@@ -1,0 +1,19 @@
+.roman {
+    
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.square {
+
+margin-left: -2em;
+}
+.alpha{
+    margin-left:3em;
+    padding-bottom: 0;
+    
+}
+.num{
+   
+    padding-bottom: 0;
+    margin-left:1em;
+}
