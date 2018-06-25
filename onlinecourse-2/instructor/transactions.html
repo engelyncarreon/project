@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>NTU | Instructor Approval</title>
+        <title>NTU | Transactions</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -25,7 +25,7 @@
     <body class="skin-black">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="adminDashboard.html" class="logo">
+            <a href="instrDashboard.html" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 Noble Trends Unbound
             </a>
@@ -299,7 +299,7 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li>
-                            <a href="adminDashboard.html">
+                            <a href="instrDashboard.html">
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li>
@@ -308,53 +308,20 @@
                                 <i class="fa fa-th"></i> <span>User Approval</span> <small class="badge pull-right bg-green">new</small>
                             </a>
                         </li> -->
-                        <li class="treeview">
+                        <li class="">
                             <a href="#">
-                                <i class="fa fa-bar-chart-o"></i>
-                                <span>User Approval</span>
-                                <i class="fa fa-angle-left pull-right"></i>
+                                <i class="fa fa-table"></i> <span>Add Course</span>
                             </a>
-                            <ul class="treeview-menu">
-                                <li><a href="studentApproval.html"><i class="fa fa-angle-double-right"></i> Student</a></li>
-                                <li class="active"><a href="instructorApproval.html"><i class="fa fa-angle-double-right"></i> Instructor</a></li>
-                            </ul>
                         </li>
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-laptop"></i>
-                                <span>User Management</span>
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="manageStudent.html"><i class="fa fa-angle-double-right"></i> Student</a></li>
-                                <li><a href="manageInstructor.html"><i class="fa fa-angle-double-right"></i> Instructor</a></li>
-                            </ul>
-                        </li>
-                        <li class="sidebar-menu">
+                        <li class="">
                             <a href="courses.html">
                                 <i class="fa fa-edit"></i> <span>Courses</span>
                             </a>
                         </li>
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-table"></i> <span>Enroll</span>
-                            </a>
-                        </li>
-                        <li>
+                        <li class="active">
                             <a href="transactions.html">
                                 <i class="fa fa-calendar"></i> <span>Transactions</span>
                                 <small class="badge pull-right bg-red">3</small>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="pages/mailbox.html">
-                                <i class="fa fa-envelope"></i> <span>Announcements</span>
-                                <small class="badge pull-right bg-yellow">12</small>
-                            </a>
-                        </li>
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-folder"></i> <span>Evaluation Settings</span>
                             </a>
                         </li>
                     </ul>
@@ -367,7 +334,7 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Instructor Approval
+                       Transactions
                         <!-- <small>advanced tables</small> -->
                     </h1>
                     <ol class="breadcrumb">
@@ -387,16 +354,11 @@
                                     <table id="example1" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
-                                                <th>Lastname</th>
-                                                <th>Firstname</th>
-                                                <th>Username</th>
-                                                <th>Email</th>
-                                                <th>Address</th>
-                                                <th>Contact No. </th>
-                                                <th>Gender</th>
-                                                <th>Age</th>
-                                                <th>Status</th>
-                                                <th>Action</th>
+                                                <th>Course Name</th>
+                                                <th>Course Amount</th>
+                                                <th>Student Enrolled</th>
+                                                <th>Total Amount</th>
+                                            </tr>
                                         </thead>
                                         <tbody>
                                         </tbody>
