@@ -859,6 +859,7 @@ body > .header .logo .icon {
 .sidebar {
   margin-bottom: 5px;
 }
+
 .sidebar .sidebar-form input:focus {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -2934,11 +2935,13 @@ Component: timeline
 */
 /* skin-black navbar */
 .skin-black .navbar {
-  background-color: #ffffff;
+  /*background-color: #ffffff;*/
+  background-color: #06968e;
   border-bottom: 1px solid #eee;
 }
 .skin-black .navbar .nav a {
-  color: #333333;
+  /*color: #333333;*/
+  color: white;
 }
 .skin-black .navbar .nav > li > a:hover,
 .skin-black .navbar .nav > li > a:active,
@@ -2960,14 +2963,17 @@ Component: timeline
 }
 /* skin-black logo */
 .skin-black .logo {
-  background-color: #333333;
+  /*background-color: #333333;*/
+  background-color: #06968e;
   color: #f9f9f9;
 }
 .skin-black .logo > a {
   color: #f9f9f9;
 }
 .skin-black .logo:hover {
-  background: #303030;
+  /*background: #303030;*/
+  background-color: white;
+  color: black;
 }
 /* skin-black content header */
 .skin-black .right-side > .content-header {
@@ -2980,36 +2986,51 @@ Component: timeline
 }
 .skin-black .user-panel > .info,
 .skin-black .user-panel > .info > a {
-  color: #eee;
+  color: black;
 }
 /* skin-black sidebar */
 .skin-black .sidebar {
-  border-bottom: 1px solid #333;
+  /*border-bottom: 1px solid #333;*/
+  border-bottom: 1px solid #06968e;
 }
 .skin-black .sidebar > .sidebar-menu > li {
-  border-top: 1px solid #333;
-  border-bottom: 0px solid #444;
+/*  border-top: 1px solid #333;
+  border-bottom: 0px solid #444;*/
+  border-top: 1px solid #06968e;
+  border-bottom: 0px solid #06968e;
 }
 .skin-black .sidebar > .sidebar-menu > li:first-of-type {
-  border-top: 1px solid #444;
+  /*border-top: 1px solid #444;*/
+  border-top: 1px solid #06968e;
+
 }
 .skin-black .sidebar > .sidebar-menu > li:first-of-type > a {
-  border-top: 0px solid #333;
+  /*border-top: 0px solid #333;*/
+  border-top: 0px solid #06968e;
 }
 .skin-black .sidebar > .sidebar-menu > li > a {
   margin-right: 1px;
 }
 .skin-black .sidebar > .sidebar-menu > li > a:hover,
 .skin-black .sidebar > .sidebar-menu > li.active > a {
-  color: #f6f6f6;
-  background: #444;
+/*  color: #f6f6f6;
+  background: #444;*/
+  color: black;
+  background : white;
+}
+.skin-black .sidebar > .sidebar-menu > li > a,
+.skin-black .sidebar > .sidebar-menu > li.active > a {
+/*  color: #f6f6f6;
+  background: #444;*/
+  color: black;
 }
 .skin-black .sidebar > .sidebar-menu > li > .treeview-menu {
   margin: 0 1px;
-  background: #444;
+  /*background: #444;*/
+  background: url("../img/background/bg3-1.jpg");
 }
 .skin-black .left-side {
-  background: #333;
+  background: url("../img/background/bg3-1.jpg");
 }
 .skin-black .sidebar a {
   color: #eee;
@@ -3018,11 +3039,12 @@ Component: timeline
   text-decoration: none;
 }
 .skin-black .treeview-menu > li > a {
-  color: #ccc;
+  /*color: #ccc;*/
+  color: black;
 }
 .skin-black .treeview-menu > li.active > a,
 .skin-black .treeview-menu > li > a:hover {
-  color: #fff;
+  background-color: white;
 }
 .skin-black .sidebar-form {
   -webkit-border-radius: 2px;
@@ -3156,4 +3178,48 @@ Component: timeline
 }
 .pace-inactive {
   display: none;
+}
+
+/*evaluation settings tab links*/
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #09b1a8;
+    background-color: #09b1a8;
+    
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    color: #fff;
+    background-color: #02544b;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    color: #fff;
+    background-color: #02544b;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 15px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.tab .tabcontent{
+  margin: 5px 5px 5px 5px;
 }
