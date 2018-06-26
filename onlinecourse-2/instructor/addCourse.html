@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>NTU | Student Approval</title>
+        <title>NTU | Add Course</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -289,7 +289,7 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li>
-                            <a href="adminDashboard.html">
+                            <a href="instrDashboard.html">
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li>
@@ -298,53 +298,20 @@
                                 <i class="fa fa-th"></i> <span>User Approval</span> <small class="badge pull-right bg-green">new</small>
                             </a>
                         </li> -->
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-bar-chart-o"></i>
-                                <span>User Approval</span>
-                                <i class="fa fa-angle-left pull-right"></i>
+                        <li class="active">
+                            <a href="addCourse.html">
+                                <i class="fa fa-table"></i> <span>Add Course</span>
                             </a>
-                            <ul class="treeview-menu">
-                                <li class="active"><a href="studentApproval.html"><i class="fa fa-angle-double-right"></i> Student</a></li>
-                                <li><a href="instructorApproval.html"><i class="fa fa-angle-double-right"></i> Instructor</a></li>
-                            </ul>
                         </li>
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-laptop"></i>
-                                <span>User Management</span>
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="manageStudent.html"><i class="fa fa-angle-double-right"></i> Student</a></li>
-                                <li><a href="manageInstructor.html"><i class="fa fa-angle-double-right"></i> Instructor</a></li>
-                            </ul>
-                        </li>
-                        <li class="sidebar-menu">
+                        <li class="">
                             <a href="courses.html">
                                 <i class="fa fa-edit"></i> <span>Courses</span>
                             </a>
                         </li>
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-table"></i> <span>Enroll</span>
-                            </a>
-                        </li>
-                        <li>
+                        <li class="">
                             <a href="transactions.html">
                                 <i class="fa fa-calendar"></i> <span>Transactions</span>
                                 <small class="badge pull-right bg-red">3</small>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="announcement.html">
-                                <i class="fa fa-envelope"></i> <span>Announcements</span>
-                                <small class="badge pull-right bg-yellow">12</small>
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="evaluationSet.html">
-                                <i class="fa fa-folder"></i> <span>Evaluation Settings</span>
                             </a>
                         </li>
                     </ul>
@@ -357,7 +324,7 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Student Approval
+                        Add Course
                         <!-- <small>advanced tables</small> -->
                     </h1>
                     <ol class="breadcrumb">
@@ -372,59 +339,120 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="box">
-                            <div class="box">
-                                <div class="box-body table-responsive">
-                                    <table id="example1" class="table table-bordered table-striped">
-                                        <thead>
-                                            <tr>
-                                               <th>Lastname</th>
-                                                <th>Firstname</th>
-                                                <th>Username</th>
-                                                <th>Email</th>
-                                                <th>Address</th>
-                                                <th>Contact No. </th>
-                                                <th>Gender</th>
-                                                <th>Age</th>
-                                                <th>Status</th>
-                                                <th>Action</th>
-                                        </thead>
-                                        <tbody>
-                                        </tbody>
-                                    </table>
-                                </div><!-- /.box-body -->
-                            </div><!-- /.box -->
-                        </div>
-                    </div>
+                                <form action="addCourse.php" class="course" method="post" enctype="multipart/form-data">
 
+                                <div class="col-xs-6">
+
+                                    <p>Course Name</p>                               
+                                    <input type="text" class="form-control" col="3" name="coursename" required=""> 
+
+                                    <p>Category</p>
+                                    <input type="text" name="category" class="form-control" required="">
+
+                                    <p>Price</p>
+
+                                    <div class="input-group">
+
+                                        <span class="input-group-addon">P</span>
+                                        <input type="number" name="price" class="form-control" required="">
+
+                                    </div>
+
+                                    <p>Duration</p>
+                                    <input type="number" name="duration" class="form-control" required=""><br>
+
+                                    <p>Short Description</p>
+                                    <textarea class="form-control" rows="5" name="coursedesc" required=""></textarea>
+
+                                </div>
+                                <div class="col-xs-6">
+                                    <p>Course Overview</p>
+                                    <textarea class="form-control" rows="5" name="courseover" required=""></textarea>
+
+                                    <p>Course Learning Objective</p>
+                                    <textarea class="form-control" rows="5" name="courselearn" required=""></textarea>
+
+                                    <p>Requirement</p>
+                                    <textarea class="form-control" rows="5" name="requirement" required=""></textarea><br>
+
+                                    <p>Course Image: <input title="Choose image for your course" type="File" name="upfile" id="upfile" required=""></p>
+                                    <p id="error1" style="display:none; color:#FF0000;">
+                                         Invalid Image Format! Image Format Must Be JPG, JPEG, PNG or GIF.
+                                    </p>
+                                    <p id="error2" style="display:none; color:#FF0000;">
+                                         Maximum File Size Limit is 10MB.
+                                    </p>
+                                    <input type="hidden" id="ext" name="ext">
+                                    <button class="btn btn-success" name="submit" type="submit" id="submit" disabled=""><i class="fa fa-check"></i> Submit</button>
+                                   <!--  <input class = "button link" type = "submit" name="submit" value = "Add new course"></input> -->
+                                </div>
+                                </form>
+                            </div>
+                         </div>
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
 
+        <!-- start of announcement modal -->
+        <div id="announcementView" role="dialog " class="modal fade">
+          <div class="modal-dialog  modal-md">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                      <h3>Announcement 
+                        <button class="close" data-dismiss="modal">×</button>
+                    </h3>
+                </div>
+               <div class="modal-body">                     
+                   <div class="row">
+                       <div class="col-lg-12">
+                            <form method="post" action="announcementprogram.php">
+                                <p>
+                                    <input type="checkbox" value="instructor" name="instr">Instructor
+                                    <input type="checkbox" value="student" name="stud">Student
+                                </p>
+                                <p>Subject:
+                                    <input type="text" name="sub" required="">
+                                </p>
+                                <p>Announcement:
+                                    <textarea row="7" cols="65" name="ann" required=""> </textarea>
+                                </p>
+                                <input type="hidden" name="admin" value="1">
+                                <div class="text-center">
+                                    <input type="submit" name="announce" class="center btn btn-success" value="Add Announcement" required="">
+                                </div>
+                           </form>
+                       </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+            <!-- end of announcement modal -->
 
-        <!-- jQuery 2.0.2 -->
-        <script src="../assets/js/jquery.min.js"></script>
-        <!-- Bootstrap -->
-        <script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
-        <!-- DATA TABES SCRIPT -->
-        <script src="../assets/js/plugins/datatables/jquery.dataTables.js" type="text/javascript"></script>
-        <script src="../assets/js/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
-        <!-- AdminLTE App -->
-        <script src="../assets/js/AdminLTE/app.js" type="text/javascript"></script>
+    <!-- jQuery 2.0.2 -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- DATA TABES SCRIPT -->
+    <script src="../assets/js/plugins/datatables/jquery.dataTables.js" type="text/javascript"></script>
+    <script src="../assets/js/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
+    <!-- AdminLTE App -->
+    <script src="../assets/js/AdminLTE/app.js" type="text/javascript"></script>
 
-        <!-- page script -->
-        <script type="text/javascript">
-            $(function() {
-                $("#example1").dataTable();
-                $('#example2').dataTable({
-                    "bPaginate": true,
-                    "bLengthChange": false,
-                    "bFilter": false,
-                    "bSort": true,
-                    "bInfo": true,
-                    "bAutoWidth": false
-                });
+    <!-- page script -->
+    <script type="text/javascript">
+        $(function() {
+            $("#example1").dataTable();
+            $('#example2').dataTable({
+                "bPaginate": true,
+                "bLengthChange": false,
+                "bFilter": false,
+                "bSort": true,
+                "bInfo": true,
+                "bAutoWidth": false
             });
-        </script>
+        });
+    </script>
 
     </body>
 </html>

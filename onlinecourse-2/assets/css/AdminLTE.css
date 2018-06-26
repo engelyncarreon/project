@@ -2940,7 +2940,8 @@ Component: timeline
   border-bottom: 1px solid #eee;
 }
 .skin-black .navbar .nav a {
-  color: #333333;
+  /*color: #333333;*/
+  color: white;
 }
 .skin-black .navbar .nav > li > a:hover,
 .skin-black .navbar .nav > li > a:active,
@@ -2970,7 +2971,9 @@ Component: timeline
   color: #f9f9f9;
 }
 .skin-black .logo:hover {
-  background: #303030;
+  /*background: #303030;*/
+  background-color: white;
+  color: black;
 }
 /* skin-black content header */
 .skin-black .right-side > .content-header {
@@ -2987,17 +2990,23 @@ Component: timeline
 }
 /* skin-black sidebar */
 .skin-black .sidebar {
-  border-bottom: 1px solid #333;
+  /*border-bottom: 1px solid #333;*/
+  border-bottom: 1px solid #06968e;
 }
 .skin-black .sidebar > .sidebar-menu > li {
-  border-top: 1px solid #333;
-  border-bottom: 0px solid #444;
+/*  border-top: 1px solid #333;
+  border-bottom: 0px solid #444;*/
+  border-top: 1px solid #06968e;
+  border-bottom: 0px solid #06968e;
 }
 .skin-black .sidebar > .sidebar-menu > li:first-of-type {
-  border-top: 1px solid #444;
+  /*border-top: 1px solid #444;*/
+  border-top: 1px solid #06968e;
+
 }
 .skin-black .sidebar > .sidebar-menu > li:first-of-type > a {
-  border-top: 0px solid #333;
+  /*border-top: 0px solid #333;*/
+  border-top: 0px solid #06968e;
 }
 .skin-black .sidebar > .sidebar-menu > li > a {
   margin-right: 1px;
@@ -3171,5 +3180,46 @@ Component: timeline
   display: none;
 }
 
-/*sidebar bg*/
+/*evaluation settings tab links*/
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #09b1a8;
+    background-color: #09b1a8;
+    
+}
 
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    color: #fff;
+    background-color: #02544b;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    color: #fff;
+    background-color: #02544b;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 15px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.tab .tabcontent{
+  margin: 5px 5px 5px 5px;
+}
